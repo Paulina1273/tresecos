@@ -227,6 +227,25 @@
 #seccion5 a:hover {
     text-decoration: underline; 
 }
+
+
+#seccion2 
+.photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px; /* Espacio entre las imágenes */
+        }
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+        }
+        @media (max-width: 600px) {
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
     </style>
 </head>
 <body>
@@ -260,19 +279,25 @@
     </section>
 
     <section id="seccion2" class="section-content">
-        <h2>2</h2>
-        <p>
-       </p>
+        <h2>Pieza</h2>
+        <div class="photo-grid">
+            <img src="foto1.jpg" alt="Foto 1">
+            <img src="foto2.jpg" alt="Foto 2">
+            <img src="foto3.jpg" alt="Foto 3">
+            <img src="foto4.jpg" alt="Foto 4">
+            <img src="foto5.jpg" alt="Foto 5">
+            <img src="foto6.jpg" alt="Foto 6">
+            <!-- Agrega más imágenes según sea necesario -->
+        </div>
     </section>
 
     <section id="seccion3" class="section-content">
         <h2>plastico</h2>
        
-        <p>Las empresas de la industria del plástico que han sido identificadas como contaminantes del río Lerma incluyen varias que han sido clausuradas por la Procuraduría Federal de Protección al Ambiente (PROFEPA). Entre estas empresas se encuentran aquellas localizadas en los estados de México, Michoacán y Querétaro, donde se ha llevado a cabo la mayoría de las clausuras debido a la contaminación industrial​ (https://www.gob.mx/profepa/prensa/clausura-profepa-31-empresas-por-contaminacion-en-el-rio-lerma)​​ ( *https://lajornadaestadodemexico.com/de-22-sitios-monitoreados-del-rio-lerma-72-por-ciento-registraron-alta-toxicidad/)​.
-
-            La información específica sobre los nombres de las empresas de la industria del plástico no siempre se divulga públicamente, pero se sabe que la industria plástica es una de las muchas que contribuyen a la contaminación del río. Esta contaminación incluye residuos peligrosos y descargas de aguas residuales no tratadas adecuadamente​ (https://infogram.com/contaminacion-del-rio-lerma-1hmr6glvnqw34nl#:~:text=URL%3A%20https%3A%2F%2Finfogram.com%2Fcontaminacion)​.
+        <p>Las empresas de la industria del plástico que han sido identificadas como contaminantes del río Lerma incluyen varias que han sido clausuradas por la Procuraduría Federal de Protección al Ambiente (PROFEPA). Entre estas empresas se encuentran aquellas localizadas en los estados de México, Michoacán y Querétaro, donde se ha llevado a cabo la mayoría de las clausuras debido a la contaminación industrial​ (https://www.gob.mx/profepa/prensa/clausura-profepa-31-empresas-por-contaminacion-en-el-rio-lerma)
+            La información específica sobre los nombres de las empresas de la industria del plástico no siempre se divulga públicamente, pero se sabe que la industria plástica es una de las muchas que contribuyen a la contaminación del río. Esta contaminación incluye residuos peligrosos y descargas de aguas residuales no tratadas adecuadamente​​.
             
-            En resumen, aunque las autoridades han tomado medidas contra varias empresas industriales en la cuenca del río Lerma, las empresas específicas del sector plástico no siempre se identifican explícitamente en los informes públicos. Para más detalles, es recomendable revisar los comunicados oficiales de PROFEPA y otros informes ambientales regionales.
+         En resumen, aunque las autoridades han tomado medidas contra varias empresas industriales en la cuenca del río Lerma, las empresas específicas del sector plástico no siempre se identifican explícitamente en los informes públicos. Para más detalles, es recomendable revisar los comunicados oficiales de PROFEPA y otros informes ambientales regionales.
             <iframe width="800" height="450" src="https://www.youtube.com/embed/kvGzZrF6W-k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
        
@@ -287,9 +312,9 @@
         <h2>textil</h2>
         <p>En la industria textil, algunas empresas han sido señaladas por contaminar el río Lerma y otras corrientes de agua en México. Dos ejemplos prominentes son Kaltex y Lavamex.
 
-            Kaltex, ubicada en San Juan del Río, Querétaro, y Lavamex, en Aguascalientes, han sido mencionadas en informes de Greenpeace por descargar sustancias peligrosas en los ríos cercanos a sus instalaciones. Estos procesos incluyen el teñido y lavado de mezclilla, un producto clave en la industria textil mexicana. Entre los contaminantes identificados en los efluentes de estas plantas se encuentran el nonilfenol, que puede causar trastornos hormonales, así como otros compuestos tóxicos para la vida acuática como benzotriazoles y fosfato de tributilo​ (https://www.multimedios.com/historico/textiles-mezclillas-marca-contaminan-mexico.html)​​ (https://eltiempolatino.com/2012/12/05/noticias-latinoamerica/empresas-textiles-mexicanas-contaminan-rios/)​.
+            Kaltex, ubicada en San Juan del Río, Querétaro, y Lavamex, en Aguascalientes, han sido mencionadas en informes de Greenpeace por descargar sustancias peligrosas en los ríos cercanos a sus instalaciones. Estos procesos incluyen el teñido y lavado de mezclilla, un producto clave en la industria textil mexicana. Entre los contaminantes identificados en los efluentes de estas plantas se encuentran el nonilfenol, que puede causar trastornos hormonales, así como otros compuestos tóxicos para la vida acuática como benzotriazoles y fosfato de tributilo​ 
             
-            Estas empresas y otras del sector textil en México enfrentan desafíos significativos relacionados con la gestión de residuos y el cumplimiento de normativas ambientales. La alta toxicidad del agua en ciertas áreas es una preocupación constante, y se han realizado esfuerzos para monitorear y mejorar la calidad del agua en la región del río Lerma​ (https://lajornadaestadodemexico.com/de-22-sitios-monitoreados-del-rio-lerma-72-por-ciento-registraron-alta-toxicidad/)​.
+            Estas empresas y otras del sector textil en México enfrentan desafíos significativos relacionados con la gestión de residuos y el cumplimiento de normativas ambientales. La alta toxicidad del agua en ciertas áreas es una preocupación constante, y se han realizado esfuerzos para monitorear y mejorar la calidad del agua en la región del río Lerma​ .
             <iframe width="800" height="450" src="https://www.youtube.com/embed/y2VI8CiEMj4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
            </p>
@@ -298,9 +323,9 @@
     <section id="seccion5" class="section-content">
         <h2>Automotriz </h2>
         <p>
-            Entre las empresas de la industria automotriz que han sido señaladas por contaminar el río Lerma se encuentra Honda, específicamente en el contexto del río Santiago, que es parte de la cuenca Lerma-Santiago. Honda fue identificada junto con otras empresas en un informe del gobierno de Jalisco por descargar aguas residuales que no cumplen con los estándares normativos​ (https://otrosmundoschiapas.org/guadalajara-hersheys-nestle-y-honda-entre-las-29-empresas-que-contaminan-el-rio-santiago)​.
+            Entre las empresas de la industria automotriz que han sido señaladas por contaminar el río Lerma se encuentra Honda, específicamente en el contexto del río Santiago, que es parte de la cuenca Lerma-Santiago. Honda fue identificada junto con otras empresas en un informe del gobierno de Jalisco por descargar aguas residuales que no cumplen con los estándares normativos​ ​.
 
-Además, en el parque industrial de Lerma, hay varias empresas automotrices y relacionadas con la producción de autopartes que podrían estar contribuyendo a la contaminación si no manejan adecuadamente sus residuos industriales. Entre estas empresas se encuentran Johnson Controls Automotriz México y Nissan Mexicana, que se dedican al ensamblaje y distribución de partes automotrices respectivamente​ (https://lerma.gob.mx/lerma/negocios/directorio-de-empresas/)​.
+Además, en el parque industrial de Lerma, hay varias empresas automotrices y relacionadas con la producción de autopartes que podrían estar contribuyendo a la contaminación si no manejan adecuadamente sus residuos industriales. Entre estas empresas se encuentran Johnson Controls Automotriz México y Nissan Mexicana, que se dedican al ensamblaje y distribución de partes automotrices respectivamente​ ​.
 
 La contaminación del río Lerma es un problema complejo que involucra a múltiples sectores industriales, incluyendo la automotriz, y requiere de la cooperación entre empresas y autoridades para implementar prácticas más sostenibles y reducir la descarga de contaminantes en el río.
 <iframe width="800" height="450" src="https://www.youtube.com/embed/bQbxyQh6K2A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
