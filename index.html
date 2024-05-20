@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRES ECOS </title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #103518;
+            padding: 0; /* Eliminar el espacio en blanco superior */
+            position: relative;
+        }
+
+        header h1 {
+            font-family: "Garamond", serif;
+            font-size: 48px;
+            position: absolute; /* Colocar el título por encima de las imágenes */
+            top: 350px; /* Ajustar la posición vertical del título */
+            left: 50%; /* Centrar el título horizontalmente */
+            transform: translateX(-50%); /* Centrar el título horizontalmente */
+        }
+
+        nav {
+            background-color: rgba(24, 72, 19, 0.652) ;
+            color: ;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 30px;
+            background-color: rgb(24, 72, 19, 0.652);
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: "Garamond", serif;
+        }
+
+        .image-slider {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .section-content {
+            margin-top: 0;
+        }
+
+        .section-content {
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 100px; /* Aumenta el espacio vertical entre las secciones */
+        }
+
+        /* Estilos para las imágenes dentro de las secciones */
+        .section-content img {
+            width: 100%;
+            max-width: 400px; /* Ajusta el tamaño máximo de las imágenes según tu preferencia */
+            display: block;
+            margin: 0 auto; /* Centra las imágenes horizontalmente */
+        }
+
+        /* Cambia el fondo de las secciones */
+        #seccion1,
+        #seccion3,
+        #seccion5 {
+            background-color: white ; /* Color de fondo para las secciones 1, 3 y 5 */
+            text-align: center; /* Alinea el contenido a la izquierda */
+            margin-right: auto;
+        }
+
+        #seccion2,
+        #seccion4 {
+            background-color: white ; /* Color de fondo para las secciones 2 y 4 */
+            text-align: center; /* Alinea el contenido a la derecha */
+            
+        }
+
+        /* Carrusel de imágenes al inicio de la página */
+        .image-slider {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Estilos para el carrusel de imágenes en secciones 3 y 5 */
+        .carousel-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video {
+    flex: 1;
+    padding: 20px;
+}
+
+
+.carousel img:first-child {
+    display: block; /* mostrar solo la primera imagen */
+
+}
+.carousel img {
+    width: 90000px;  /* Ajusta según necesites */
+    height: 90000;  /* Mantiene la proporción de la imagen */
+    display: ; /* Ocultar todas las imágenes inicialmente */
+}
+@media (min-width: 768px) {
+    .carousel img {
+        width: 750px;  /* Más grande en pantallas más anchas */
+    }
+}
+@media (max-width: 767px) {
+    .carousel img {
+        width: 100%;  /* Adaptativo en pantallas más pequeñas */
+    }
+}
+.media-container {
+    display: flex;
+}
+
+.image-container, .video-container {
+    flex: 1; /* Asigna la mitad del ancho del contenedor padre a cada uno */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Organiza los contenidos en columnas */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+}
+
+.image-container img {
+    width: 100%; /* Asegura que la imagen cubra completamente el contenedor */
+    height: auto;
+}
+
+.video-container video {
+    width: 100%; /* Ajusta el ancho del video al 100% del contenedor */
+    max-width: 640px; /* Puedes ajustar esto según la anchura máxima que desees */
+}
+
+.video-text {
+    width: 100%; /* Asegura que el texto cubra el ancho del video */
+    padding: 10px 0; /* Espaciado superior e inferior para el texto */
+    background-color: rgb(255, 255, 255); /* Fondo semitransparente para mejorar la legibilidad del texto */
+    color: white; /* Color del texto */
+    text-align: justify; /* Centra el texto horizontalmente */
+    position: absolute;
+    top: 0; /* Posiciona el texto en la parte superior del contenedor de video */
+    z-index: 10; /* Asegura que el texto esté por encima del video */
+}
+
+    
+    #seccion1 h2,
+    #seccion2 h2,
+    #seccion4 h2 {
+    font-family: "Times New Roman", Times, serif; /* Usar la fuente Times New Roman */
+    font-size: 20px; /* Tamaño de fuente para los títulos (ajusta según tus preferencias) */
+    margin-bottom: 100px;
+    margin-top: 90px; /* Separación superior entre el título y el texto (ajusta según tus preferencias) */
+    margin-right: auto;
+}
+
+/* Estilo para el contenido de las secciones 1, 2 y 4 */
+#seccion1 p,
+#seccion2 p,
+#seccion4 p,
+#seccion3 p
+,#seccion5 p ,
+
+·{
+    text-align: justify; /* Justificar el texto */
+    font-family: "Times New Roman", Times, serif; /* Usar la fuente Times New Roman */
+    font-size: 18px; /* Tamaño de fuente para el texto (ajusta según tus preferencias) */
+    line-height: 2.5; /* Espaciado entre líneas (ajusta según tus preferencias) */
+    margin: 0 auto; /* Centrar el texto horizontalmente */
+    max-width: 750px; /* Establecer un ancho máximo para el texto (ajusta según tus preferencias) */
+}
+
+#seccion5 a {
+    color: #E4405F; 
+    text-decoration: none;
+    font-weight: bold; 
+}
+
+#seccion5 a:hover {
+    text-decoration: underline; 
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>TRES ECOS </h1>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="#seccion1">TRES ECOS </a>
+        <a href="#seccion2">Pieza</a>
+        <a href="#seccion3">Ecos 1</a>
+        <a href="#seccion4">Ecos 2</a>
+        <a href="#seccion5">Ecos 3</a>
+    </nav>
+
+    <!-- Carrusel de imágenes al inicio de la página -->
+    <div class="image-slider"></div> <!-- Elimina la etiqueta <img> -->
+
+    <section id="seccion1" class="section-content">
+        <h2>TRES ECOS </h2>
+        <p>Este proyecto artístico se presenta como una instalación interactiva que explora y visibiliza la tensión entre el desarrollo industrial y la preservación de los ecosistemas naturales, centrado en el caso específico del río Lerma y sus alrededores en la zona industrial de Lerma de Villada. A través de un acuaterrario central, complementado con elementos audiovisuales y esculturales, esta obra simboliza las industrias y un sistema que bombea agua contaminada, ilustrando el deterioro continuo del río durante los últimos 50 años.
+
+            El uso creativo del espacio no solo sirve como medio de expresión artística, sino que también facilita una interacción directa de los espectadores con el entorno creado. Esta interactividad permite una comprensión más sencilla y profunda del impacto ambiental negativo, como el ecocidio de la flora, provocado por el vertido de aguas residuales y la actividad industrial. Con esta instalación, buscamos no solo informar sobre el daño ambiental, sino también provocar una reflexión crítica sobre nuestro papel en la conservación y el deterioro de nuestros ecosistemas vitales.
+            
+            
+            
+       
+        </p>
+    </section>
+
+    <section id="seccion2" class="section-content">
+        <h2>2</h2>
+        <p>
+       </p>
+    </section>
+
+    <section id="seccion3" class="section-content">
+        <h2>plastico</h2>
+       
+        <p>Las empresas de la industria del plástico que han sido identificadas como contaminantes del río Lerma incluyen varias que han sido clausuradas por la Procuraduría Federal de Protección al Ambiente (PROFEPA). Entre estas empresas se encuentran aquellas localizadas en los estados de México, Michoacán y Querétaro, donde se ha llevado a cabo la mayoría de las clausuras debido a la contaminación industrial​ (https://www.gob.mx/profepa/prensa/clausura-profepa-31-empresas-por-contaminacion-en-el-rio-lerma)​​ ( *https://lajornadaestadodemexico.com/de-22-sitios-monitoreados-del-rio-lerma-72-por-ciento-registraron-alta-toxicidad/)​.
+
+            La información específica sobre los nombres de las empresas de la industria del plástico no siempre se divulga públicamente, pero se sabe que la industria plástica es una de las muchas que contribuyen a la contaminación del río. Esta contaminación incluye residuos peligrosos y descargas de aguas residuales no tratadas adecuadamente​ (https://infogram.com/contaminacion-del-rio-lerma-1hmr6glvnqw34nl#:~:text=URL%3A%20https%3A%2F%2Finfogram.com%2Fcontaminacion)​.
+            
+            En resumen, aunque las autoridades han tomado medidas contra varias empresas industriales en la cuenca del río Lerma, las empresas específicas del sector plástico no siempre se identifican explícitamente en los informes públicos. Para más detalles, es recomendable revisar los comunicados oficiales de PROFEPA y otros informes ambientales regionales.
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/kvGzZrF6W-k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+       
+        </p>
+            
+           
+       
+    </section>
+     
+
+    <section id="seccion4" class="section-content">
+        <h2>textil</h2>
+        <p>En la industria textil, algunas empresas han sido señaladas por contaminar el río Lerma y otras corrientes de agua en México. Dos ejemplos prominentes son Kaltex y Lavamex.
+
+            Kaltex, ubicada en San Juan del Río, Querétaro, y Lavamex, en Aguascalientes, han sido mencionadas en informes de Greenpeace por descargar sustancias peligrosas en los ríos cercanos a sus instalaciones. Estos procesos incluyen el teñido y lavado de mezclilla, un producto clave en la industria textil mexicana. Entre los contaminantes identificados en los efluentes de estas plantas se encuentran el nonilfenol, que puede causar trastornos hormonales, así como otros compuestos tóxicos para la vida acuática como benzotriazoles y fosfato de tributilo​ (https://www.multimedios.com/historico/textiles-mezclillas-marca-contaminan-mexico.html)​​ (https://eltiempolatino.com/2012/12/05/noticias-latinoamerica/empresas-textiles-mexicanas-contaminan-rios/)​.
+            
+            Estas empresas y otras del sector textil en México enfrentan desafíos significativos relacionados con la gestión de residuos y el cumplimiento de normativas ambientales. La alta toxicidad del agua en ciertas áreas es una preocupación constante, y se han realizado esfuerzos para monitorear y mejorar la calidad del agua en la región del río Lerma​ (https://lajornadaestadodemexico.com/de-22-sitios-monitoreados-del-rio-lerma-72-por-ciento-registraron-alta-toxicidad/)​.
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/y2VI8CiEMj4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+           </p>
+    </section>
+
+    <section id="seccion5" class="section-content">
+        <h2>Automotriz </h2>
+        <p>
+            Entre las empresas de la industria automotriz que han sido señaladas por contaminar el río Lerma se encuentra Honda, específicamente en el contexto del río Santiago, que es parte de la cuenca Lerma-Santiago. Honda fue identificada junto con otras empresas en un informe del gobierno de Jalisco por descargar aguas residuales que no cumplen con los estándares normativos​ (https://otrosmundoschiapas.org/guadalajara-hersheys-nestle-y-honda-entre-las-29-empresas-que-contaminan-el-rio-santiago)​.
+
+Además, en el parque industrial de Lerma, hay varias empresas automotrices y relacionadas con la producción de autopartes que podrían estar contribuyendo a la contaminación si no manejan adecuadamente sus residuos industriales. Entre estas empresas se encuentran Johnson Controls Automotriz México y Nissan Mexicana, que se dedican al ensamblaje y distribución de partes automotrices respectivamente​ (https://lerma.gob.mx/lerma/negocios/directorio-de-empresas/)​.
+
+La contaminación del río Lerma es un problema complejo que involucra a múltiples sectores industriales, incluyendo la automotriz, y requiere de la cooperación entre empresas y autoridades para implementar prácticas más sostenibles y reducir la descarga de contaminantes en el río.
+<iframe width="800" height="450" src="https://www.youtube.com/embed/bQbxyQh6K2A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+
+
+</p>
+    
+
+      
+       
+</section>
+    </section>
+
+    <script>
+        const images = [
+            "imagen5.jpg",
+            "imagen4.jpg",
+            "imagen3.jpg",
+            "imagen2.jpg",
+            "imagen1.jpg",
+            "imagen6.jpg",
+            "imagen7.png",
+        ];
+
+        let currentImageIndex = 0;
+        const imageSlider = document.querySelector(".image-slider");
+
+        function changeImage() {
+            imageSlider.style.backgroundImage = `url(${images[currentImageIndex]})`;
+            imageSlider.style.opacity = 1; // Mostrar la imagen
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            setTimeout(hideImage, 550); // Ocultar la imagen después de 5 segundos
+        }
+
+        function hideImage() {
+            imageSlider.style.opacity = 0; // Ocultar la imagen
+            setTimeout(changeImage, 150); // Cambiar a la siguiente imagen después de 1 segundo de ocultarla
+        }
+
+        // Inicia el cambio de imágenes
+        setTimeout(changeImage, 0);
+
+        // Carruseles de imágenes en secciones 3 y 5
+        const prevBtn3 = document.getElementById("prevBtn3");
+        const nextBtn3 = document.getElementById("nextBtn3");
+        const carouselImages3 = document.querySelectorAll("#seccion3 img");
+        let currentIndex3 = 0;
+
+        prevBtn3.addEventListener("click", () => {
+            currentIndex3 = (currentIndex3 - 1 + carouselImages3.length) % carouselImages3.length;
+            updateCarousel3();
+        });
+
+        nextBtn3.addEventListener("click", () => {
+            currentIndex3 = (currentIndex3 + 1) % carouselImages3.length;
+            updateCarousel3();
+        });
+
+        function updateCarousel3() {
+            carouselImages3.forEach((img, index) => {
+                if (index === currentIndex3) {
+                    img.style.display = "block";
+                } else {
+                    img.style.display = "none";
+                }
+            });
+        }
+
+        const prevBtn5 = document.getElementById("prevBtn5");
+        const nextBtn5 = document.getElementById("nextBtn5");
+        const carouselImages5 = document.querySelectorAll("#seccion5 img");
+        let currentIndex5 = 0;
+
+        prevBtn5.addEventListener("click", () => {
+            currentIndex5 = (currentIndex5 - 1 + carouselImages5.length) % carouselImages5.length;
+            updateCarousel5();
+        });
+
+        nextBtn5.addEventListener("click", () => {
+            currentIndex5 = (currentIndex5 + 1) % carouselImages5.length;
+            updateCarousel5();
+        });
+
+        function updateCarousel5() {
+            carouselImages5.forEach((img, index) => {
+                if (index === currentIndex5) {
+                    img.style.display = "block";
+                } else {
+                    img.style.display = "none";
+                }
+            });
+        }
+        function updateCarousel3() {
+    const imgs = document.querySelectorAll("#seccion3 .carousel img");
+    imgs.forEach(img => img.style.display = 'none'); // Ocultar todas las imágenes
+    imgs[currentIndex3].style.display = 'block'; // Mostrar la imagen actual
+}
+
+    </script>
+</body>
+</html>
